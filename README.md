@@ -1,24 +1,16 @@
-# my-vuex
+## 一个简单不版本的Vuex
 
-## Project setup
+实现的功能点:
+  - State
+  - Mutation
+  - Action
+  - Module
+  - Commit
+  - Dispatch
+
+欢迎Star，有问题的可以issues。
+
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

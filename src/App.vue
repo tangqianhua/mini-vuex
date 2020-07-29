@@ -1,28 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <p>state: {{ $store.state.age }}</p>
-    <p>getters: {{ $store.getters.getName }}</p>
+    <p>{{ $store.state }}</p>
+    <p>getters:{{ $store.getters.getName }}</p>
     <button @click="handleClick">点击</button>
-    <button @click="syncHandleClick">异步点击</button>
+    <button @click="syncHandleClick">异步点击</button>-->
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
+  name: 'App',
+  components: {},
   methods: {
     handleClick() {
-      this.$store.commit("add", 22);
+      this.$store.commit('changeAge', 22);
     },
 
     syncHandleClick() {
-      this.$store.dispatch("increment", 18);
+      this.$store.dispatch('syncChangeAge', 18);
     },
   },
 };

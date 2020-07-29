@@ -1,11 +1,11 @@
-import Vue from "vue";
-import App from "./App.vue";
-import Vuex from "./vuex/index";
+import Vue from 'vue';
+import App from './App.vue';
+import Vuex from './Vuex/index';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    name: "tqh",
+    name: 'tqh',
     age: 26,
   },
   getters: {
@@ -14,14 +14,14 @@ const store = new Vuex.Store({
     },
   },
   mutations: {
-    add(state, payload) {
+    changeAge(state, payload) {
       state.age = payload;
     },
   },
   actions: {
-    increment(context, payload) {
+    syncChangeAge({ commit }, payload) {
       setTimeout(() => {
-        context.commit("add", payload);
+        commit('changeAge', payload);
       }, 1000);
     },
   },
@@ -31,5 +31,5 @@ Vue.config.productionTip = false;
 
 new Vue({
   store,
-  render: (h) => h(App),
-}).$mount("#app");
+  render: h => h(App),
+}).$mount('#app');
